@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "sonarqube-scanner": "^5.0.0"
+  },
+  "scripts": {
+	  "start": "node server.js",
+	  "sonar":"sonar-scanner-npm"
+  }
+
+}
