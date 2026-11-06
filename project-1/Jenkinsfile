@@ -1,11 +1,6 @@
 pipeline {
   agent any
  
-  tools {
-    // Tells Jenkins to provision the 'node' tool you configured globally
-    nodejs 'node'
-  }
-
   environment {
     PROJECT_DIR = "project-1"
     PM2_APP_NAME = "node-app"
@@ -35,7 +30,6 @@ pipeline {
     stage('Run Tests') {
       steps {
         dir("${PROJECT_DIR}") {
-          // Since your package.json doesn't have a test script yet, we handle it gracefully:
           sh 'npm test || echo "Tests skipped or mock completed"'
         }
       }
@@ -84,4 +78,3 @@ URL: ${env.BUILD_URL}"""
     }
   }
 }
-
