@@ -10,12 +10,10 @@ pipeline {
   stages {
     stage('Preparation') {
       steps {
-        sh '''
-          echo "Build started!"
-          echo "Branch: ${env.GIT_BRANCH}"
-          echo "Build Number: ${env.BUILD_NUMBER}"
-          ls -la
-        '''
+        // Changed to use clear Jenkins string injection to avoid /bin/sh Bad Substitution error
+        echo "Build started!"
+        echo "Build Number: ${env.BUILD_NUMBER}"
+        sh 'ls -la'
       }
     }
  
