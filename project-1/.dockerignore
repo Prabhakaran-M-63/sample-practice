@@ -1,0 +1,9 @@
+cat << 'EOF' > ~/jen-try/project-1/.dockerignore
+node_modules
+npm-debug.log
+.git
+.gitignore
+.env*
+Dockerfile
+EOF
+
