@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
     log("Health check called");
     res.status(200).json({
-        status: "UPss"
+        status: "UP sssf"
     });
 });
 
